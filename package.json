@@ -31,7 +31,6 @@
     "graphql": "^0.13.2",
     "hapi": "^17.5.2",
     "lodash": "^4.17.10",
-    "merge-graphql-schemas": "^1.5.3",
     "nodemon": "^1.18.3"
   }
 }
