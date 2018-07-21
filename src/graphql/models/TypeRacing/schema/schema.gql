@@ -1,0 +1,10 @@
+module.exports = [`
+
+  # Type Racing Data
+  type TypeRacing {
+    email: String!
+    score: Int!
+    nationality: String!
+  }
+
+`]

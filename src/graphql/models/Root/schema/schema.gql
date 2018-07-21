@@ -2,11 +2,14 @@ module.exports = [`
 
   # Allowed queries:
   type Query {
-    #A simple type for getting started!
+    # A simple type for getting started!
     rootHello: String
 
-    #Basic contact
+    # Basic contact
     contacts: [Contact]
+
+    # Type Racing Data
+    typeRacing(id: ID!): TypeRacing
   }
 
   schema {
