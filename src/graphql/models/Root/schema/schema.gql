@@ -1,0 +1,16 @@
+module.exports = [`
+
+  # Allowed queries:
+  type Query {
+    #A simple type for getting started!
+    rootHello: String
+
+    #Basic contact
+    contacts: [Contact]
+  }
+
+  schema {
+    query: Query
+  }
+
+`];

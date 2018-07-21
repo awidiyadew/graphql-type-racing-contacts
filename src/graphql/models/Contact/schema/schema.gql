@@ -1,0 +1,8 @@
+module.exports = [`
+    type Contact {
+      name: String!
+      email: String!
+      phone: String
+      photo: String
+    }
+`];
