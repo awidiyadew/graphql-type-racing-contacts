@@ -1,7 +1,6 @@
 const Query = require('./queries');
+const TypeResolvers = require('./type');
 
-const resolvers = {
-  Query,
-};
+const resolvers = Object.assign({ Query }, TypeResolvers);
 
 module.exports = { resolvers };
