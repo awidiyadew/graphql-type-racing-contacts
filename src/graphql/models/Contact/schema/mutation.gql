@@ -1,0 +1,7 @@
+module.exports = [`
+
+  extend type Mutation {
+    createContact(input: CreateContactInput!): Contact!
+  }
+
+`];

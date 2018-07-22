@@ -1,0 +1,10 @@
+module.exports = [`
+
+  input CreateContactInput {
+    name: String!
+    email: String!
+    phone: String
+    photo: String
+  }
+
+`];

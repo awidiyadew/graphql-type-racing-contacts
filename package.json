@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "<add-project-description-here>",
   "scripts": {
-    "runJsonServer": "json-server --watch json-server/db.json",
-    "start": "runJsonServer && nodemon src/app.js",
-    "start:debug": "runJsonServer && nodemon --inspect-brk src/app.js",
+    "start": "json-server --watch json-server/db.json | nodemon src/app.js",
+    "start:debug": "json-server --watch json-server/db.json | nodemon --inspect-brk src/app.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },

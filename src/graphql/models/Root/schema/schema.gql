@@ -12,8 +12,13 @@ module.exports = [`
     typeRacing(id: ID!): TypeRacing
   }
 
+  type Mutation {
+    _empty: String
+  }
+
   schema {
     query: Query
+    mutation: Mutation
   }
 
 `];
