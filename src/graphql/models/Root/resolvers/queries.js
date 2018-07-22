@@ -1,3 +1,3 @@
 module.exports = {
-  rootHello: () => 'Pokoknya ini resolvers root!',
+  hello: () => 'Hello world!',
 };

@@ -5,7 +5,7 @@ require('@firebase/firestore');
 dotenv.config();
 
 /**
- * Represent a service to connect with Firestore Database
+ * Represent a service to fetch data from Firestore Database
  */
 class FirestoreService {
   constructor(config) {

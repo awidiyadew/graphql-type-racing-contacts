@@ -3,13 +3,7 @@ module.exports = [`
   # Allowed queries:
   type Query {
     # A simple type for getting started!
-    rootHello: String
-
-    # Basic contact
-    contacts: [Contact]
-
-    # Type Racing Data
-    typeRacing(id: ID!): TypeRacing
+    hello: String
   }
 
   type Mutation {

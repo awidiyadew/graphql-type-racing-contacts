@@ -6,4 +6,10 @@ module.exports = [`
       photo: String
       typeRacing: TypeRacing
     }
+
+    extend type Query {
+      # Contact with type racing data
+      contacts: [Contact]
+    }
+
 `];
