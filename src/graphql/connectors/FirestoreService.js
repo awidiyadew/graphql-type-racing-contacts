@@ -8,24 +8,24 @@ dotenv.config();
  * Represent a service to connect with Firestore Database
  */
 class FirestoreService {
-  constructor() {
-    this._init();
+  constructor(config) {
+    this._init(config);
     this._firestore = firebase.firestore();
     this._COLLECTION_NAME = 'players';
   }
 
-  _init() {
-    const config = {
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      databaseURL: process.env.DATABASE_URL,
-      projectId: process.env.PROJECT_ID,
-      storageBucket: process.env.STORAGE_BUCKET,
-      messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  _init(config) {
+    const options = {
+      apiKey: config.API_KEY,
+      authDomain: config.AUTH_DOMAIN,
+      databaseURL: config.DATABASE_URL,
+      projectId: config.PROJECT_ID,
+      storageBucket: config.STORAGE_BUCKET,
+      messagingSenderId: config.MESSAGING_SENDER_ID,
     };
 
     if (!firebase.apps.length) {
-      firebase.initializeApp(config);
+      firebase.initializeApp(options);
     }
   }
 

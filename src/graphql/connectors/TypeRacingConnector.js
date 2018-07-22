@@ -6,7 +6,7 @@ const FirestoreService = require('./FirestoreService');
 class TypeRacingConnector {
   constructor(opts) {
     Object.assign(this, opts);
-    this._firestoreService = new FirestoreService();
+    this._firestoreService = new FirestoreService(this.config);
   }
 
   getTypeRacing(email) {

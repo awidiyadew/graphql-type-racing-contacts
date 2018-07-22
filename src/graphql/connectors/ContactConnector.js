@@ -9,15 +9,15 @@ class ContactConnector {
   }
 
   async getContacts() {
-    const response = await axios.get('http://localhost:3000/contacts');
+    const response = await axios.get(`${this.config.CONTACT_URL}/contacts`);
     const { data: contacts } = response;
     return contacts;
   }
 
   async createContact(contact) {
-    const response = await axios.post('http://localhost:3000/contacts', contact);
-    const { data: contacts } = response;
-    return contacts;
+    const response = await axios.post(`${this.config.CONTACT_URL}/contacts`, contact);
+    const { data: insertedContact } = response;
+    return insertedContact;
   }
 }
 

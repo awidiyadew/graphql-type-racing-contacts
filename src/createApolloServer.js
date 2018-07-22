@@ -14,10 +14,11 @@ const createApolloServer = async (hapiServer) => {
     schema: executableSchema,
     context: async ({ request }) => {
       const { headers } = request;
+      const config = process.env;
 
       return {
         models,
-        connectors: getConnectors(headers),
+        connectors: getConnectors(headers, config),
       };
     },
   });
