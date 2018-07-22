@@ -4,7 +4,7 @@ const createApolloServer = require('./createApolloServer');
 const startServer = async () => {
   const options = {
     host: 'localhost',
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4000,
     debug: {
       log: ['info', 'error'],
     },

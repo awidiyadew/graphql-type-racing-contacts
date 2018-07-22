@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 /**
  * Represent connection to Contact Service
  */
@@ -7,25 +9,9 @@ class ContactConnector {
   }
 
   async getContacts() {
-    const contacts = [
-      {
-        name: 'Dewa',
-        email: 'awidiya.dewa@gmail.com',
-        phone: '085737737737',
-      },
-      {
-        name: 'Iqbal',
-        email: 'iqbal@gmail.com',
-        phone: '085737737737',
-      },
-      {
-        name: 'Reza',
-        email: 'reza@gmail.com',
-        phone: '085737737737',
-      },
-    ];
-
-    return Promise.resolve(contacts);
+    const contactsResponse = await axios.get('http://localhost:3000/contacts');
+    const { data: contacts } = contactsResponse;
+    return contacts;
   }
 }
 
